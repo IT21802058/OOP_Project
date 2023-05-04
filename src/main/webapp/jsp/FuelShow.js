@@ -1,10 +1,10 @@
 const data = { 
     labels: ['Petrol', 'Octane95 Petrol ', 'Diesel', 'Super Diesel'],
     datasets: [{
-		int:petrol=50,
-		int:octane95=100,
-		int:diesel=60,
-		int:superdiesel=30,
+		int:petrol=7500,
+		int:octane95=10000,
+		int:diesel=6000,
+		int:superdiesel=3000,
         label: '#Storage Amount',
         data: [petrol, octane95, diesel, superdiesel],
         backgroundColor: [

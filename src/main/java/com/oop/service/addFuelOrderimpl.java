@@ -11,7 +11,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.oop.model.Fuel_order;
-import com.oop.model.ShowOrder;
 import com.oop.util.DBConnection;
 
 public class addFuelOrderimpl implements ifuelorder{
