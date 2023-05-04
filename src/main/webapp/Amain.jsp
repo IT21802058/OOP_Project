@@ -43,13 +43,13 @@
 	</header>
 	</div >
 	<table align="center">
-					
+
 				<tr style="height:500px">
 					<td style="width:350px">
 					<a href="FuelShow.jsp">
 					<button><div class="button1"><br>
 					<img src="images\FeulStatus.jpeg" height="160px" width="160px"><br/>
-					<p><b>View Fuel Satus</b></p>
+					<p><b>View Fuel Status</b></p>
 					</div></button></a>
 					</td>
 					
