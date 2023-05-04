@@ -1,0 +1,64 @@
+.chart-container {
+    width: 800px;
+    margin: 20px auto;
+}
+h1{
+	text-align:center;
+	font-family:verdana;
+}
+
+.square {
+  height: 650px;
+  width: 1000px;
+  border-radius: 25px;
+  border: 2px solid;
+  padding: 20px;
+  background-color:white;
+  margin-right:auto;
+  margin-left:auto;
+  display:block;
+}
+header{
+	background-color:#FFF;
+	padding: 15px;
+	box-shadow: 0 0 3px #000;
+	text-align:center;
+}
+
+header li{
+	display: inline;
+	padding-left: 45px;
+}
+
+header li a{
+	color: #333;
+	text-decoration: none;
+	padding: 13px;
+}
+
+header li a:hover{
+	background-color: lightblue;
+	border-radius: 30px;
+}
+ 
+.edit{
+	margin-right:10%;
+	margin-left:90%;
+  	border:2px solid;
+  	border-radius: 20px;
+  	height:30px;
+  	width:50px;
+  	background-color:lightgreen;
+}
+.button1{
+	margin-right:50%;
+  	margin-left:44%;
+  	border:2px solid;
+  	border-radius: 25px;
+  	height:60px;
+  	width:150px;
+  	background-color:orange;
+  	font-size:20px;
+  	color:white;
+}
+	

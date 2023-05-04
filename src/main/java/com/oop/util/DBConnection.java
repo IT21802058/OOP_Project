@@ -9,7 +9,7 @@ public class DBConnection {
 	private static Connection conn = null;   								//declare variable from connection
 	private static String url = "jdbc:mysql://localhost:3306/ovsafsms";		//conenction url
 	private static String Username = "root";								//user name of the database
-	private static String Password = "Root";								//password of the database
+	private static String Password = "root";								//password of the database
 	
 	//method of get database connection for other methods which return the connection
 	public static Connection getDBConnection(){

@@ -79,4 +79,45 @@
     <servlet-name>readAllRequest_servlet</servlet-name>
     <url-pattern>/readAllRequest_servlet</url-pattern>
   </servlet-mapping>
+<servlet>
+    <description></description>
+    <display-name>FuelM</display-name>
+    <servlet-name>FuelM</servlet-name>
+    <servlet-class>com.oop.servlet.FuelM</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FuelM</servlet-name>
+    <url-pattern>/FuelM</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Order</display-name>
+    <servlet-name>Order</servlet-name>
+    <servlet-class>com.oop.servlet.Order</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Order</servlet-name>
+    <url-pattern>/Order</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowOrder</display-name>
+    <servlet-name>ShowOrder</servlet-name>
+    <servlet-class>com.oop.service.ShowOrder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowOrder</servlet-name>
+    <url-pattern>/ShowOrder</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowOrderServlet</display-name>
+    <servlet-name>ShowOrderServlet</servlet-name>
+    <servlet-class>com.oop.servlet.ShowOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowOrderServlet</servlet-name>
+    <url-pattern>/ShowOrderServlet</url-pattern>
+  </servlet-mapping>
+
 </web-app>
