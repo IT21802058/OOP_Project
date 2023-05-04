@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.topContainer{
+	position: relative;
+	background-color:#F1F1F1;
+}
+.BrandName{
+	position: absolute;
+  	top: 0px;
+  	right: 16px;
+  	font-family: cursive;
+  	color: #FF6666;
+}
+
+body{
+	background-image:url("../images/Background.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}

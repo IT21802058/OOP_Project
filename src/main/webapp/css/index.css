@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+.nav{
+	text-align: center;
+}
+
+.indexBody{
+	text-align: center;
+	margin-top: 90px;
+	font-size: 50px;
+	margin-bottom: 95px;
+}
+
+#LogIn{
+	width:400px;
+	height: 200px;
+	border-radius: 30px;
+	font-size: 40px;
+	background-color:lightgreen;
+}
+
+#LogIn:hover{
+	background-color:lightgray;
+	color:green;
+}
+
+#SignUP{
+	width:400px;
+	height: 200px;
+	border-radius: 30px;
+	font-size: 40px;
+	background-color:lightgreen;
+}
+
+#SignUP:hover{
+	background-color:lightgray;
+	color:green;
+}
+
+header{
+	background-color:#FFF;
+	padding: 15px;
+	box-shadow: 0 0 3px #000;
+}
+
+header li{
+	display: inline;
+	padding-left: 45px;
+}
+
+header li a{
+	color: #333;
+	text-decoration: none;
+	padding: 13px;
+}
+
+header li a:hover{
+	background-color: lightblue;
+	border-radius: 30px;
+}
