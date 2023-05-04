@@ -119,5 +119,45 @@
     <servlet-name>ShowOrderServlet</servlet-name>
     <url-pattern>/ShowOrderServlet</url-pattern>
   </servlet-mapping>
+<servlet>
+    <description></description>
+    <display-name>registerServlet</display-name>
+    <servlet-name>registerServlet</servlet-name>
+    <servlet-class>com.oop.servlet.registerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>registerServlet</servlet-name>
+    <url-pattern>/registerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteAccount</display-name>
+    <servlet-name>DeleteAccount</servlet-name>
+    <servlet-class>com.oop.servlet.DeleteAccount</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteAccount</servlet-name>
+    <url-pattern>/DeleteAccount</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DltAccServlet</display-name>
+    <servlet-name>DltAccServlet</servlet-name>
+    <servlet-class>com.oop.servlet.DltAccServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DltAccServlet</servlet-name>
+    <url-pattern>/DltAccServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DisplayCustomer</display-name>
+    <servlet-name>DisplayCustomer</servlet-name>
+    <servlet-class>com.oop.servlet.DisplayCustomer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayCustomer</servlet-name>
+    <url-pattern>/DisplayCustomer</url-pattern>
+  </servlet-mapping>
 
 </web-app>

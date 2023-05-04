@@ -6,7 +6,7 @@ abstract public class User {
 	/*
 	 * Declaring class variables
 	 */
-	protected String NIC;
+	protected static String NIC;
 	protected String Name;
 	protected String Phone;
 	protected String email;
@@ -17,91 +17,91 @@ abstract public class User {
 	/*
 	 * return NIC
 	 */
-	protected String getNIC() {
+	public String getNIC() {
 		return NIC;
 	}
 	
 	/*
 	 * Assign NIC value
 	 */
-	protected void setNIC(String nIC) {
+	public void setNIC(String nIC) {
 		NIC = nIC;
 	}
 	
 	/*
 	 * return name
 	 */
-	protected String getName() {
+	public String getName() {
 		return Name;
 	}
 	
 	/*
 	 * Assign name
 	 */
-	protected void setName(String name) {
+	public void setName(String name) {
 		Name = name;
 	}
 	
 	/*
 	 * return phone number
 	 */
-	protected String getPhone() {
+	public String getPhone() {
 		return Phone;
 	}
 	
 	/*
 	 * Assign phone number
 	 */
-	protected void setPhone(String phone) {
+	public void setPhone(String phone) {
 		Phone = phone;
 	}
 	
 	/*
 	 * return email
 	 */
-	protected String getEmail() {
+	public String getEmail() {
 		return email;
 	}
 	
 	/*
 	 * Assign email
 	 */
-	protected void setEmail(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 	
 	/*
 	 * return username
 	 */
-	protected String getUsername() {
+	public String getUsername() {
 		return Username;
 	}
 	
 	/*
 	 * Assign username
 	 */
-	protected void setUsername(String username) {
+	public void setUsername(String username) {
 		Username = username;
 	}
 	
 	/*
 	 * return password
 	 */
-	protected String getPassword() {
+	public String getPassword() {
 		return Password;
 	}
 	
 	/*
 	 * Assign password
 	 */
-	protected void setPassword(String password) {
+	public void setPassword(String password) {
 		Password = password;
 	}
 	
 	/*
 	 * return usertype
 	 */
-	protected String getUsertype() {
+	public String getUsertype() {
 		return Usertype;
 	}
 	

@@ -11,7 +11,7 @@ public class Customer extends User{
 	/*
 	 * constructor for Customer
 	 */
-	public Customer(String nIC, String name, String phone, String email, String username, String password,
+	/*public Customer(String nIC, String name, String phone, String email, String username, String password,
 			String usertype, String city) {
 		NIC = nIC;
 		Name = name;

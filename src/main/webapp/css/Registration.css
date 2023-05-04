@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+
+.div1{
+  margin: auto;
+  padding: 20px; 
+  width : 35%;
+  padding: 10px;
+  border: 2px solid #800000;
+  border-radius: 20px;
+  background-color: #ffe7ba;    
+  text-align :left;
+}
+  
+  .btnSub {  
+	  background-color: #6bab50; 
+	  color: white;  
+	  padding: 10px 15px;  
+	  margin: 5px 0;  
+	  border: none;  
+	  cursor: pointer;  
+	  width: 100px;  
+	  opacity: 0.9;
+	  text-align: center;  
+	  border-radius: 6px;  
+}
+
+.btnSub:hover {  
+  opacity: 20;  
+} 
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #e6e6e6;
+  opacity: 1; /* Firefox */
+}
