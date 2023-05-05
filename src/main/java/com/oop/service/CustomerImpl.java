@@ -1,6 +1,7 @@
 package com.oop.service;
 
 import com.oop.model.Customer;
+import com.oop.model.Service;
 import com.oop.util.DBConnection;
 
 import java.sql.Connection;
@@ -142,26 +143,27 @@ public class CustomerImpl implements iCustomer{
 	}
 	
 	@Override
-	public Customer getCustomerdeatails(String NIC) {
+	public ArrayList<Customer> getCustomerdeatails() {
 		
+		ArrayList<Customer> arrayList = new ArrayList<Customer>();
 		Customer customer = new Customer();
 						
 		try {
 			connection = DBConnection.getDBConnection();
 			
-			preparedStatement = connection.prepareStatement("select NIC, Name, Phone, email, City,Username, Password from registration where NIC = ?");
+			preparedStatement = connection.prepareStatement("select Name, Phone, email, City,Username, Password from registration where NIC = ?");
 			
-			preparedStatement.setString(1, NIC);
+			preparedStatement.setString(1, Customer.NIC);
 			
 			ResultSet resultSet = preparedStatement.executeQuery();
 			
-			customer.setNIC(resultSet.getString(1));
-			customer.setName(resultSet.getString(2));
-			customer.setPhone(resultSet.getString(3));
-			customer.setEmail(resultSet.getString(4));
-			customer.setCity(resultSet.getString(5));
-			customer.setUsername(resultSet.getString(6));
-			customer.setPassword(resultSet.getString(7));
+			
+			customer.setName(resultSet.getString(1));
+			customer.setPhone(resultSet.getString(2));
+			customer.setEmail(resultSet.getString(3));
+			customer.setCity(resultSet.getString(4));
+			customer.setUsername(resultSet.getString(5));
+			customer.setPassword(resultSet.getString(6));
 			
 			
 		} catch (SQLException e) {
@@ -181,7 +183,7 @@ public class CustomerImpl implements iCustomer{
 				System.out.println(e);
 			}
 		}
-		return customer;
+		return arrayList;
 		
 	}
 		 

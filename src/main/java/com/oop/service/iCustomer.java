@@ -1,7 +1,9 @@
 package com.oop.service;
 
+import java.util.ArrayList;
 import java.util.logging.Logger;
 import com.oop.model.Customer;
+import com.oop.model.Service;
 
 public interface iCustomer {
 	/** Initialize logger */
@@ -15,5 +17,5 @@ public interface iCustomer {
 	
 	public void deleteCustomer(String NIC);
 	
-	public Customer  getCustomerdeatails(String NIC);
+	public ArrayList<Customer> getCustomerdeatails();
 }

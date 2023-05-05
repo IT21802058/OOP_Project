@@ -6,7 +6,7 @@ abstract public class User {
 	/*
 	 * Declaring class variables
 	 */
-	protected static String NIC;
+	public static String NIC;
 	protected String Name;
 	protected String Phone;
 	protected String email;

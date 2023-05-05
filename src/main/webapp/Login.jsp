@@ -42,10 +42,10 @@
 					<a href="" class="form_link"> Forgot your password?</a>
 				</p>
 				<p class="form_text">
-					<a href="" class="form_link" id ="linkCreatAccount"> Don't have a account? create account</a>
+					<a href="Registration.jsp" class="form_link" id ="linkCreatAccount"> Don't have a account? create account</a>
 				</p>
 				<p class="form_text">
-					<a href="" class="form_link" id ="dltAccount"> Want to delete account?</a>
+					<a href="DeleteAcoount.jsp" class="form_link" id ="dltAccount"> Want to delete account?</a>
 				</p>
 			</form>
 		</div>	

@@ -45,7 +45,7 @@
 					
 				<tr style="height:500px">
 					<td style="width:350px">
-					<a href="">
+					<a href="DisplayCustomerServlet">
 					<button><div class="button1"><br>
 					<img src="images\FeulStatus.jpeg" height="160px" width="160px"><br/>
 					<p><b>View Fuel Satus</b></p>

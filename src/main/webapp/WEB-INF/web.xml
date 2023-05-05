@@ -151,13 +151,13 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>DisplayCustomer</display-name>
-    <servlet-name>DisplayCustomer</servlet-name>
-    <servlet-class>com.oop.servlet.DisplayCustomer</servlet-class>
+    <display-name>DisplayCustomerServlet</display-name>
+    <servlet-name>DisplayCustomerServlet</servlet-name>
+    <servlet-class>com.oop.servlet.DisplayCustomerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>DisplayCustomer</servlet-name>
-    <url-pattern>/DisplayCustomer</url-pattern>
+    <servlet-name>DisplayCustomerServlet</servlet-name>
+    <url-pattern>/DisplayCustomerServlet</url-pattern>
   </servlet-mapping>
 
 </web-app>

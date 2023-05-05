@@ -7,6 +7,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import com.oop.model.Customer;
 import com.oop.model.Service;
 import com.oop.service.Login_service;
 
@@ -65,6 +67,10 @@ public class loginServlet extends HttpServlet {
 				//store the nic value in service model creating svsobject
 				Service svc = new Service();
 					svc.setNIC(NIC);
+					
+				Customer cus = new Customer();
+					cus.setNIC(NIC);
+				 
 					
 		}catch(IOException e) {
 			//write in clonsole the location of the error
