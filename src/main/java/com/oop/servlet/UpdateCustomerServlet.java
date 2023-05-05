@@ -7,22 +7,17 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-
-import com.oop.model.Customer;
-import com.oop.service.CustomerImpl;
-import com.oop.service.iCustomer;
 
 /**
- * Servlet implementation class DisplayCustomer
+ * Servlet implementation class UpdateCustomerServlet
  */
-public class DisplayCustomerServlet extends HttpServlet {
+public class UpdateCustomerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DisplayCustomerServlet() {
+    public UpdateCustomerServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,18 +27,14 @@ public class DisplayCustomerServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		
-		iCustomer iCustomer = new CustomerImpl();
-		Customer cus = iCustomer.getCustomerdeatails();
-				
-		request.setAttribute("cusDetails", cus);
 		
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ProfileDetails.jsp");
 		dispatcher.forward(request, response);
 	}
 
-	/**;
+	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

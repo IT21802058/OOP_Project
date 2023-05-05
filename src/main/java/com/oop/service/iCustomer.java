@@ -3,7 +3,7 @@ package com.oop.service;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 import com.oop.model.Customer;
-import com.oop.model.Service;
+
 
 public interface iCustomer {
 	/** Initialize logger */
@@ -15,7 +15,12 @@ public interface iCustomer {
 	/** check if user exists */
 	public boolean checkNICExist(String NIC);
 	
+	/**delete customer account**/
 	public void deleteCustomer(String NIC);
 	
-	public ArrayList<Customer> getCustomerdeatails();
+	/**update profile details**/
+	public void UpdateCustomer(Customer customer);
+	
+	/**view customer profile**/
+	public Customer getCustomerdeatails();
 }

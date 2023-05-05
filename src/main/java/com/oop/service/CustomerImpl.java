@@ -108,6 +108,7 @@ public class CustomerImpl implements iCustomer{
 		return userExist;
 	}
 	
+	/**delete customer account**/
 	@Override
 	public void deleteCustomer(String NIC) {
 				
@@ -142,28 +143,62 @@ public class CustomerImpl implements iCustomer{
 		
 	}
 	
+	/*display customer details in the profile*/
 	@Override
-	public ArrayList<Customer> getCustomerdeatails() {
+	public Customer getCustomerdeatails() {
 		
-		ArrayList<Customer> arrayList = new ArrayList<Customer>();
 		Customer customer = new Customer();
 						
 		try {
 			connection = DBConnection.getDBConnection();
 			
-			preparedStatement = connection.prepareStatement("select Name, Phone, email, City,Username, Password from registration where NIC = ?");
-			
+			preparedStatement = connection.prepareStatement("select NIC, Name, Phone, email, City, Username, Password from registration where NIC = ?");
 			preparedStatement.setString(1, Customer.NIC);
 			
 			ResultSet resultSet = preparedStatement.executeQuery();
 			
+			while (resultSet.next()) {
+			customer.setNIC(resultSet.getString(1));	
+			customer.setName(resultSet.getString(2));
+			customer.setPhone(resultSet.getString(3));
+			customer.setEmail(resultSet.getString(4));
+			customer.setCity(resultSet.getString(5));
+			customer.setUsername(resultSet.getString(6));
+			customer.setPassword(resultSet.getString(7));
+			}
 			
-			customer.setName(resultSet.getString(1));
-			customer.setPhone(resultSet.getString(2));
-			customer.setEmail(resultSet.getString(3));
-			customer.setCity(resultSet.getString(4));
-			customer.setUsername(resultSet.getString(5));
-			customer.setPassword(resultSet.getString(6));
+		} catch (SQLException e) {
+			log.log(Level.SEVERE, e.getMessage());
+			System.out.println(e);
+			
+		} finally {
+			try {
+				if (preparedStatement != null) {
+					preparedStatement.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				log.log(Level.SEVERE, e.getMessage());
+				System.out.println(e);
+			}
+		}
+		return customer;
+		
+	}
+	
+	/*update customer details*/ 
+	
+	public void UpdateCustomer(Customer customer) {
+		
+		
+						
+		try {
+			connection = DBConnection.getDBConnection();
+			
+			preparedStatement = connection.prepareStatement("update registration set Name= ? , Phone=? , email=? , Username=? Password = ? where NIC = ?");
+			preparedStatement.setString(1, Customer.NIC);
 			
 			
 		} catch (SQLException e) {
@@ -183,7 +218,7 @@ public class CustomerImpl implements iCustomer{
 				System.out.println(e);
 			}
 		}
-		return arrayList;
+		
 		
 	}
 		 

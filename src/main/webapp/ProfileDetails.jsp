@@ -29,20 +29,18 @@
 			<li><a href=""> Contact us </a></li>
 		</ul>
 	</header>
+	</div>
 	
-	<% ArrayList<Customer> custArray = new ArrayList<Customer>(); 
-	custArray = (ArrayList<Customer>)request.getAttribute("cusDetails"); %>
 	
-	<%for (int i =0 ; i < custArray.size(); i++ ){
-		
-		Customer cust = custArray.get(i) ;%>
-	}
+	<% Customer cust = new Customer();
+		cust = (Customer)request.getAttribute("cusDetails"); %>
+	<form>
 	<div class="div1">
 	 <h3 style="text-align:center" >My Profile</h3>
 	  
 	 <br><br>
 	 <label for="nic"><b>NIC &nbsp;&nbsp;&nbsp;:</b></label>
-	 <input type="text" id="nic" name="nic" placeholder="<%=cust.getNIC() %>" size ="50" required maxlength="12" readonly><br><br>
+	 <input type="text" id="nic" name="nic" placeholder="<%=cust.getNIC() %> " size ="50"  maxlength="12" readonly><br><br>
 	 
 	 <label for="name"><b>Name :</b></label>
 	 <input type="text" id="name" name="name" placeholder="<%=cust.getName() %>" size ="50" readonly><br><br>
@@ -65,13 +63,16 @@
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	 <input type="checkbox" onclick="pwdConFunction()"> &nbsp;&nbsp;&nbsp;Show Password<br><br>
 	 
+	 
 	  <div class="div2" align="center">
-	 	<input type="submit" class="btnSub" id="btnSub" name="btnSub" value= "Edit Profile">
+	  <a href="UpdateProfile.jsp" class="btnSub" id="btnSub">
+	 	Edit
+	 	</a>
 	 </div>
 	 
-	 
-	</div>	  
-	<%} %>
+	 </div>
+	 </form>
+		  
 	
 	<%@ include file = "jsp/footer.jsp" %>
 </body>

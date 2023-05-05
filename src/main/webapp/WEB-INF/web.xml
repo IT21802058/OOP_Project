@@ -79,7 +79,7 @@
     <servlet-name>readAllRequest_servlet</servlet-name>
     <url-pattern>/readAllRequest_servlet</url-pattern>
   </servlet-mapping>
-<servlet>
+  <servlet>
     <description></description>
     <display-name>FuelM</display-name>
     <servlet-name>FuelM</servlet-name>
@@ -119,7 +119,7 @@
     <servlet-name>ShowOrderServlet</servlet-name>
     <url-pattern>/ShowOrderServlet</url-pattern>
   </servlet-mapping>
-<servlet>
+  <servlet>
     <description></description>
     <display-name>registerServlet</display-name>
     <servlet-name>registerServlet</servlet-name>
@@ -159,5 +159,14 @@
     <servlet-name>DisplayCustomerServlet</servlet-name>
     <url-pattern>/DisplayCustomerServlet</url-pattern>
   </servlet-mapping>
-
+  <servlet>
+    <description></description>
+    <display-name>UpdateCustomerServlet</display-name>
+    <servlet-name>UpdateCustomerServlet</servlet-name>
+    <servlet-class>com.oop.servlet.UpdateCustomerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateCustomerServlet</servlet-name>
+    <url-pattern>/UpdateCustomerServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
