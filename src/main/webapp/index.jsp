@@ -23,7 +23,7 @@
 	
 	<div class = "indexBody">
 		<a href = "Login.jsp"><button type = "button" id = "LogIn"> LogIn</button></a>
-		<a href = ""><button type = "button" id= "SignUP"> Sign up </button></a>
+		<a href = "Registration.jsp"><button type = "button" id= "SignUP"> Sign up </button></a>
 	</div>
 	
 	<%@ include file = "jsp/footer.jsp" %>

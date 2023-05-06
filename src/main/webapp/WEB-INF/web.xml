@@ -169,4 +169,14 @@
     <servlet-name>UpdateCustomerServlet</servlet-name>
     <url-pattern>/UpdateCustomerServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdVeiwExistingCusServlet</display-name>
+    <servlet-name>UpdVeiwExistingCusServlet</servlet-name>
+    <servlet-class>com.oop.servlet.UpdVeiwExistingCusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdVeiwExistingCusServlet</servlet-name>
+    <url-pattern>/UpdVeiwExistingCusServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

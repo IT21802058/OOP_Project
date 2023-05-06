@@ -197,8 +197,19 @@ public class CustomerImpl implements iCustomer{
 		try {
 			connection = DBConnection.getDBConnection();
 			
-			preparedStatement = connection.prepareStatement("update registration set Name= ? , Phone=? , email=? , Username=? Password = ? where NIC = ?");
-			preparedStatement.setString(1, Customer.NIC);
+			preparedStatement = connection.prepareStatement("update registration set Name= ? , Phone=? , email=? , Username=? ,Password = ?, City = ? where NIC = ?");
+			
+			
+			preparedStatement.setString(1, customer.getName());
+			preparedStatement.setString(2, customer.getPhone());
+			preparedStatement.setString(3, customer.getEmail());
+			preparedStatement.setString(4, customer.getUsername());
+			preparedStatement.setString(5, customer.getPassword());
+			preparedStatement.setString(6, customer.getCity());
+			preparedStatement.setString(7, customer.getNIC());	
+			
+			preparedStatement.executeUpdate();
+			connection.commit();
 			
 			
 		} catch (SQLException e) {

@@ -10,12 +10,15 @@
 
 <head>
 
-	<link rel="stylesheet" href="css/index.css"/>
-	<meta charset="UTF-8">
+	 <link rel="stylesheet" href="css/index.css"/>
+	<meta charset="UTF-8"> 
+	<script src="Script/Login.js"></script>
 	
 	<title>Update Profile Details</title>
 	
 </head>
+
+
 
 <body>
 
@@ -34,7 +37,8 @@
 	
 	<% Customer cust = new Customer();
 		cust = (Customer)request.getAttribute("cusDetails"); %>
-	<form>
+		
+	<form action="UpdateCustomerServlet" method= "POST">
 	<div class="div1">
 	 <h3 style="text-align:center" >Edit My Profile</h3>
 	  
@@ -43,28 +47,28 @@
 	 <input type="text" id="nic" name="nic" placeholder="<%=cust.getNIC() %> " size ="50"  maxlength="12" readonly><br><br>
 	 
 	 <label for="name"><b>Name :</b></label>
-	 <input type="text" id="name" name="name" placeholder="<%=cust.getName() %>" size ="50" readonly><br><br>
+	 <input type="text" id="name" name="name" value="<%=cust.getName() %>" size ="50" ><br><br>
 	 
 	 <label for="phone"><b>Phone :</b></label>
-	 <input type="text" id="phone" name="phone" placeholder="<%=cust.getPhone() %>" size ="50"   readonly><br><br>
+	 <input type="text" id="phone" name="phone" value="<%=cust.getPhone() %>" size ="50" maxlength="10"  ><br><br>
 	 
 	 <label for="email"><b>Email :</b></label>
-	 <input type="text" id="email" name="email" placeholder="<%=cust.getEmail() %>"  size ="50" readonly><br><br>
+	 <input type="text" id="email" name="email" value="<%=cust.getEmail() %>" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size ="50" ><br><br>
 	 
 	 <label for="city"><b>City :</b></label>
-	 <input type="text" id="city" name="city" placeholder="<%=cust.getCity() %>" size ="52" required readonly><br><br>
+	 <input type="text" id="city" name="city" value="<%=cust.getCity() %>" size ="52"  ><br><br>
 	 
 	 <label for="userName"><b>UserName :</b></label>
-	 <input type="text" id="userName" name="userName" placeholder="<%=cust.getUsername() %>" size ="45" required readonly><br><br>
+	 <input type="text" id="userName" name="userName" value="<%=cust.getUsername() %>" size ="45"  ><br><br>
 	 
 	 <label for="password"><b>Password :</b></label>
-	 <input type="password" id="password" name="password" placeholder="<%=cust.getPassword() %>" size ="46" required readonly><br><br>
+	 <input type="password" id="pwd" name="password" value="<%=cust.getPassword() %>" size ="46" ><br><br>
 	 
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <input type="checkbox" onclick="pwdConFunction()"> &nbsp;&nbsp;&nbsp;Show Password<br><br>
+	 <input type="checkbox" onclick="pwdFunction()"> &nbsp;&nbsp;&nbsp;Show Password<br><br>
 	 
 	  <div class="div2" align="center">
-	 	<input type="submit" class="btnSub" id="btnSub" name="btnSub" value= "Edit Profile">
+	 	<input type="submit" class="btnSub" id="btnSub" name="btnSub" value= "update Profile">
 	 </div>
 	 
 	 </div>

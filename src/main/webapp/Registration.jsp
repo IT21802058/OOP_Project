@@ -8,6 +8,7 @@
 
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/Registration.css"/>
+	<script src="Script/Login.js"></script>
 	<title>Registration</title>
 	
  
@@ -45,10 +46,10 @@
 	 <input type="password" id="password" name="password" placeholder="aB12#sTE" size ="46" required><br><br>
 	 
 	 <label for="confpassword"><b>Confirm Password :</b></label>
-	 <input type="password" id="confpassword" name="confpassword" placeholder="aB12#sTE" size ="35" required><br><br>
+	 <input type="password" id="pwd" name="confpassword" placeholder="aB12#sTE" size ="35" required><br><br>
 	 
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <input type="checkbox" onclick="pwdConFunction()"> &nbsp;&nbsp;&nbsp;Show Password<br><br>
+	 <input type="checkbox" onclick="pwdFunction()"> &nbsp;&nbsp;&nbsp;Show Password<br><br>
 	 
 	  <div class="div2" align="center">
 	 	<input type="submit" class="btnSub" id="btnSub" name="btnSub" value= "submit">

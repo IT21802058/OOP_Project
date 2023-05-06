@@ -12,7 +12,7 @@
 
 	<link rel="stylesheet" href="css/index.css"/>
 	<meta charset="UTF-8">
-	
+	<script src="Script/Login.js"></script>
 	<title>My Profile</title>
 	
 </head>
@@ -58,14 +58,14 @@
 	 <input type="text" id="userName" name="userName" placeholder="<%=cust.getUsername() %>" size ="45" required readonly><br><br>
 	 
 	 <label for="password"><b>Password :</b></label>
-	 <input type="password" id="password" name="password" placeholder="<%=cust.getPassword() %>" size ="46" required readonly><br><br>
+	 <input type="password" id="pwd" name="password" placeholder="<%=cust.getPassword() %>" size ="46" required readonly><br><br>
 	 
-	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <input type="checkbox" onclick="pwdConFunction()"> &nbsp;&nbsp;&nbsp;Show Password<br><br>
+	 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 <input type="checkbox" onclick="pwdFunction()"> &nbsp;&nbsp;&nbsp;Show Password<br><br> -->
 	 
 	 
 	  <div class="div2" align="center">
-	  <a href="UpdateProfile.jsp" class="btnSub" id="btnSub">
+	  <a href="UpdVeiwExistingCusServlet" class="btnSub" id="btnSub">
 	 	Edit
 	 	</a>
 	 </div>
