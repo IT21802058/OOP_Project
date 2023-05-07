@@ -22,6 +22,8 @@ public class addFuelOrderimpl implements ifuelorder{
 	
 	private PreparedStatement preparedStatement;
 	
+	private static boolean isSuccess;
+	
 	public void addFuelOrder(Fuel_order order) {
 		try {
 			connection = DBConnection.getDBConnection();
@@ -67,7 +69,7 @@ public class addFuelOrderimpl implements ifuelorder{
 		try {
 			connection = DBConnection.getDBConnection();
 			
-			preparedStatement = connection.prepareStatement("select id from forder");
+			preparedStatement = connection.prepareStatement("select * from forder");
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
 				Fuel_order fuelorder = new Fuel_order();
@@ -127,7 +129,24 @@ public class addFuelOrderimpl implements ifuelorder{
 		// TODO Auto-generated method stub
 		return false;
 	}
+	public static boolean deleteOrder(String id) {
+	    int convId = Integer.parseInt(id);
+	    try {
+	        connection = DBConnection.getDBConnection();
+	        statement = connection.createStatement();
+	        String sql = "delete from forder where id='" + convId + "'";
+	        int r = statement.executeUpdate(sql);
+	        if (r > 0) {
+	            isSuccess = true;
+	        } else {
+	            isSuccess = false;
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return isSuccess;
+
+	}
+
 }
-
-
 

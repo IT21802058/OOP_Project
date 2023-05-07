@@ -179,4 +179,27 @@
     <servlet-name>UpdVeiwExistingCusServlet</servlet-name>
     <url-pattern>/UpdVeiwExistingCusServlet</url-pattern>
   </servlet-mapping>
+<<<<<<< Updated upstream
+=======
+  <servlet>
+    <description></description>
+    <display-name>DeleteOrder</display-name>
+    <servlet-name>DeleteOrder</servlet-name>
+    <servlet-class>com.oop.servlet.DeleteOrder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteOrder</servlet-name>
+    <url-pattern>/DeleteOrder</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteOrderservlet</display-name>
+    <servlet-name>DeleteOrderservlet</servlet-name>
+    <servlet-class>com.oop.servlet.DeleteOrderservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteOrderservlet</servlet-name>
+    <url-pattern>/DeleteOrderservlet</url-pattern>
+  </servlet-mapping>
+>>>>>>> Stashed changes
 </web-app>

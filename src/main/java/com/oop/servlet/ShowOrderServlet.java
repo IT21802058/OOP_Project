@@ -36,14 +36,9 @@ public class ShowOrderServlet extends HttpServlet {
 		request.setAttribute("fuelOrders", fuelOrders);
 		request.getRequestDispatcher("ShowOrder.jsp").forward(request, response);
 		
-		Fuel_order fuel = new Fuel_order();
-		fuel.setProduct(request.getParameter("product"));
-		fuel.setSize(Integer.parseInt(request.getParameter("size")));
-		fuel.setQty(Integer.parseInt(request.getParameter("qty")));
-		fuel.setName(request.getParameter("name"));
-		fuel.setEmail(request.getParameter("email"));
 		
-		iFuelorder.addFuelOrder(fuel);
+		
+		
 		response.sendRedirect("ShowOrderServlet");
 	}
 

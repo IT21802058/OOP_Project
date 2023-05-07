@@ -24,7 +24,7 @@
 	<div class="square">
     <h1>Order Form</h1>
     <form method="POST" action="Order">
-      <label for="product">Product:</label>
+      <label for="product">Fuel Type:</label>
       <select id="product" name="product">
         <option value="Petrol">Petrol</option>
         <option value="Octanne 95 Petrol">Octane95 Petrol</option>
