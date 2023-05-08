@@ -8,7 +8,7 @@ import com.oop.util.DBConnection;
 import java.util.ArrayList;
 import com.oop.model.Service;
 
-public class RequestService_service {
+public class RequestService_service implements RequestService_interface {
 	
 	//declaring global variables
 	private static Connection conn = null;
@@ -16,7 +16,8 @@ public class RequestService_service {
 	private static ResultSet rslt = null;
 	private static int result = 0;	
 	
-	public static int validateRequest(String nic, String Vltrs, String Vnmbrs, String type, String date) {		
+	
+	public int validateRequest(String nic, String Vltrs, String Vnmbrs, String type, String date) {		
 		
 		//begining try block
 		try {
@@ -67,7 +68,7 @@ public class RequestService_service {
 	
 	
 	
-	public static int InsertRequest(String nic, String Vltrs, String Vnmbrs, String type, String date) {
+	public int InsertRequest(String nic, String Vltrs, String Vnmbrs, String type, String date) {
 		
 		//begining try block
 		try {
@@ -120,7 +121,7 @@ public class RequestService_service {
 	
 	
 	
-	public static int EditRequest(String serNo, String Vltrs, String Vnmbrs, String type, String date) {
+	public int EditRequest(String serNo, String type, String date) {
 		
 		//begining try block
 		try {
@@ -128,15 +129,13 @@ public class RequestService_service {
 			conn = DBConnection.getDBConnection();
 				
 			//sql query
-			String sql = "update service set vehicleLetters = ?, vehicleNo = ?, ServiceType = ?, servicedate = ? where serviceno = ?";
+			String sql = "update service set ServiceType = ?, servicedate = ? where serviceno = ?";
 		
 			//insert values to the ? in the sql
 			stmt = conn.prepareStatement(sql);
-			stmt.setString(1,Vltrs);
-			stmt.setString(2,Vnmbrs);
-			stmt.setString(3,type);
-			stmt.setString(4,date);
-			stmt.setString(5,serNo);
+			stmt.setString(1,type);
+			stmt.setString(2,date);
+			stmt.setString(3,serNo);
 			
 			//execute the query
 			int rsult = stmt.executeUpdate();
@@ -173,7 +172,7 @@ public class RequestService_service {
 	
 	
 	
-	public static int DeleteRequest(String serNo) {
+	public int DeleteRequest(String serNo) {
 		
 		//begining try block
 		try {
@@ -217,7 +216,9 @@ public class RequestService_service {
 	return result;
 	}
 	
-	public static ArrayList<Service> getAllServices() {
+	
+	
+	public ArrayList<Service> getAllServices() {
 		ArrayList<Service> arrayList = new ArrayList<Service>();
 		
 		try{
@@ -269,5 +270,95 @@ public class RequestService_service {
 			}
 		}
 		return arrayList;
+	}
+	
+	
+	
+	public String getVLettrs(String servno) {		
+		
+	String vLetters = null;
+		//begining try block
+		try {
+			//Create a database connection
+			conn = DBConnection.getDBConnection();
+		
+			//Sql query
+			String sql = "select * from service where serviceno='" + servno +"'";
+			
+			//prepare the statment
+			stmt = conn.prepareStatement(sql);
+			
+			//execute the query
+			rslt = stmt.executeQuery();
+			
+			//if succesful return
+			if(rslt.next()) {
+				vLetters = rslt.getString(3);
+			}
+		}catch(SQLException e) {
+			System.out.println("Sql error occur in com.oop.service/RequestService_service.java/getVLettrs FUNCTION");
+			System.out.println(e);
+		}finally {
+			/*
+			 * Close prepared statement and database connectivity at the end of
+			 * transaction
+			 */
+			try {
+				if (stmt != null) {
+					stmt.close();
+				}
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (SQLException e) {
+				System.out.println("There is an error wen closing the connection and preparedStatemnt in RequestService_service.java/getVLettrs");
+			}
+		}
+		return vLetters;
+	}
+
+	
+	
+	public String getNumber(String servno) {		
+	
+	String vNumb = null;
+		//begining try block
+		try {
+			//Create a database connection
+			conn = DBConnection.getDBConnection();
+		
+			//Sql query
+			String sql = "select * from service where serviceno='" + servno +"'";
+			
+			//prepare the statment
+			stmt = conn.prepareStatement(sql);
+			
+			//execute the query
+			rslt = stmt.executeQuery();
+			
+			//if succesful return
+			if(rslt.next()) {
+				vNumb = rslt.getString(4);
+			}
+		}catch(SQLException e) {
+			System.out.println("Sql error occur in com.oop.service/RequestService_service.java/getNumber FUNCTION");
+			System.out.println(e);
+		}finally {
+			/*
+			 * Close prepared statement and database connectivity at the end of
+			 * transaction
+			 */
+			try {
+				if (stmt != null) {
+					stmt.close();
+				}
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (SQLException e) {
+				System.out.println("There is an error wen closing the connection and preparedStatemnt in RequestService_service.java/getNumber");
+			}
+		}
+		return vNumb;
 	}
 }

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import com.oop.model.Service;
+import com.oop.service.RequestService_interface;
 import com.oop.service.RequestService_service;
 
 /**
@@ -37,8 +38,9 @@ public class RequestServiceServlet extends HttpServlet {
 				//get the nic value from the serivice model
 				String nic = Service.getNIC(); 
 				
+				RequestService_interface RSI = new RequestService_service();
 				//calling the validate function
-				int rslt = RequestService_service.validateRequest(nic, VLttrs, VNbr, type, date);
+				int rslt = RSI.validateRequest(nic, VLttrs, VNbr, type, date);
 				
 				//check the result from validate function
 				if (rslt == 1) {
@@ -49,7 +51,7 @@ public class RequestServiceServlet extends HttpServlet {
 					out.println("</Script>");
 				}
 				else {
-					int insertRslt = RequestService_service.InsertRequest(nic, VLttrs, VNbr, type, date);
+					int insertRslt = RSI.InsertRequest(nic, VLttrs, VNbr, type, date);
 					
 						if (insertRslt == 1) {
 							//send the alert and navigation

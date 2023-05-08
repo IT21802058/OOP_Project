@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ page import = "com.oop.service.RequestService_service" %>
+<%@ page import = "com.oop.service.RequestService_interface" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +17,7 @@
 	<div class ="nav">
 	<header>
 		<ul>
-			<li><a href="Service.jsp"> Home </a></li>
+			<li><a href="Cmain.jsp"> Home </a></li>
 			<li><a href=""> About </a></li>
 			<li><a href=""> Contact us </a></li>
 			<li><a href="Login.jsp"> Log in </a></li>
@@ -36,14 +38,23 @@
 						<br>
 						<b>Vehicle Letters  : </b>
 						<br>
-						<input type="text" name="Vletters" id = "Vhletters" placeholder="ABC" size="3" required> 
+						<%
+							RequestService_interface RSI = new RequestService_service();
+							String VLettrs = RSI.getVLettrs(serveNo);
+						%>
+						<br>
+						<b style="color:red"><%=VLettrs %></b> 
 						<br>
 						<br>
 						<br>
 						<b>Vehicle Number  : </b>
 						<br>
+						<%
+							String Vnum = RSI.getNumber(serveNo);
+						%>
 						<br>
-						<input type="text" placeholder="6744" name="VNumber" required>  
+						<br>
+						<b style="color:red"><%=Vnum %></b>  
 						<br>
 						<br>
 						<br>
@@ -60,6 +71,7 @@
 							<br>
 								<label><b>Service Date:</b></label>
   									<input type="date"  name="serviceday">
+							<br>
 							<br>
 							<br>
 							<input type="submit" class="servicebutn" value="Update" name="btnEdit"/>

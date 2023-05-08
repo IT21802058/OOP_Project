@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 
 import com.oop.model.Customer;
 import com.oop.model.Service;
+import com.oop.service.Login_interface;
 import com.oop.service.Login_service;
 
 
@@ -42,9 +43,11 @@ public class loginServlet extends HttpServlet {
 			String PWD = request.getParameter("Lpwd");
 			String NIC = null;
 				
-				//calling the validate function
-				result1 = Login_service.validate(EMAIL, PWD, "Cus");
-				result2 = Login_service.validate(EMAIL, PWD, "Adm");
+			Login_interface login = new Login_service();
+				
+			//calling the validate function
+				result1 = login.validate(EMAIL, PWD, "Cus");
+				result2 = login.validate(EMAIL, PWD, "Adm");
 				
 				//check the result from validate function
 				if(result1 == 1) {
@@ -62,7 +65,7 @@ public class loginServlet extends HttpServlet {
 				}
 				
 				//calling the getNIC function
-				NIC = Login_service.getNIC(EMAIL);
+				NIC = login.getNIC(EMAIL);
 				
 				//store the nic value in service model creating svsobject
 				Service svc = new Service();

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import jakarta.servlet.RequestDispatcher;
 import com.oop.model.Service;
+import com.oop.service.RequestService_interface;
 import com.oop.service.RequestService_service;
 
 /**
@@ -22,7 +23,11 @@ public class readAllRequest_servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		ArrayList<Service> service = RequestService_service.getAllServices();
+		
+		//creating a pbject using the interface
+		RequestService_interface RSI = new RequestService_service();
+		
+		ArrayList<Service> service = RSI.getAllServices();
 		
 		request.setAttribute("myAllRequests", service);
 		

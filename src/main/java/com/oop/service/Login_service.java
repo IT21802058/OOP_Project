@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import com.oop.util.DBConnection;
 
-public class Login_service {
+public class Login_service implements Login_interface{
 	
 	//declaring global variables
 	private static Connection conn = null;
@@ -14,7 +14,7 @@ public class Login_service {
 	private static ResultSet rslt = null;
 	
 	
-	public static int validate(String mail, String pwd, String type) {
+	public int validate(String mail, String pwd, String type) {
 		//declaration and initialization of local variable which store the sustomer type
 		int customrtype = 0;
 		
@@ -51,7 +51,7 @@ public class Login_service {
 	}
 	
 	
-	public static String getNIC(String email) {
+	public String getNIC(String email) {
 		//declaration and initialization of local variable which store the nic
 		String nic = null;
 		

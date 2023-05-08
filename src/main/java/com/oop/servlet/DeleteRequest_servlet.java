@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import com.oop.service.RequestService_interface;
 import com.oop.service.RequestService_service;
 
 /**
@@ -30,8 +31,11 @@ public class DeleteRequest_servlet extends HttpServlet {
 		//get value of the id from the form
 		String serveNo = request.getParameter("ID");
 		
+		//creating a pbject using the interface
+		RequestService_interface RSI = new RequestService_service();
+		
 		//calling the DeleteRequest function
-		int result = RequestService_service.DeleteRequest(serveNo);
+		int result = RSI.DeleteRequest(serveNo);
 		
 		//check the result from DeleteRequest function
 		if(result == 1) {

@@ -6,6 +6,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import com.oop.service.RequestService_interface;
 import com.oop.service.RequestService_service;
 
 /**
@@ -28,13 +30,14 @@ public class EditRequest_servlet extends HttpServlet {
 		
 		//get the values from th form
 		String serveNo = request.getParameter("ID");
-		String VLttrs = request.getParameter("Vletters");
-		String VNbr = request.getParameter("VNumber");
 		String type = request.getParameter("servicetype");
 		String date = request.getParameter("serviceday");
 		
+		//creating a pbject using the interface
+		RequestService_interface RSI = new RequestService_service();
+		
 		//calling the EditRequest function
-		int result = RequestService_service.EditRequest(serveNo,VLttrs,VNbr,type,date);
+		int result = RSI.EditRequest(serveNo,type,date);
 		
 		//check the result from EditRequest function
 		if(result == 1) {
