@@ -199,5 +199,4 @@
     <servlet-name>DeleteOrderservlet</servlet-name>
     <url-pattern>/DeleteOrderservlet</url-pattern>
   </servlet-mapping>
-
 </web-app>

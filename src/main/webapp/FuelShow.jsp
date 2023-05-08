@@ -34,11 +34,10 @@
     <a href="Order.jsp"><button class="button button1">Make Order</button></a>
     </div>
     
-    <form method="POST" action="ShowOrderServlet">
+    
     <div class="history">
     <a href="ShowOrder.jsp"><button class="button button1">Order History</button></a>
     </div>
-    </form>
     <script src="jsp/FuelShow.js"></script>
     
     </div>

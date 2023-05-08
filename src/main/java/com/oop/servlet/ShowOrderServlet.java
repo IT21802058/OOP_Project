@@ -23,12 +23,17 @@ public class ShowOrderServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html");
+		ifuelorder iFuelorder = new addFuelOrderimpl();
+		
+		ArrayList<Fuel_order> fuelOrders = iFuelorder.getShowOrder();
+		
+		request.setAttribute("fuelOrders", fuelOrders);
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
+		/*response.setContentType("text/html");
 		ifuelorder iFuelorder = new addFuelOrderimpl();
 		
 		ArrayList<Fuel_order> fuelOrders = iFuelorder.getShowOrder();
@@ -36,10 +41,9 @@ public class ShowOrderServlet extends HttpServlet {
 		request.setAttribute("fuelOrders", fuelOrders);
 		request.getRequestDispatcher("ShowOrder.jsp").forward(request, response);
 		
+		*/
 		
 		
-		
-		response.sendRedirect("ShowOrderServlet");
 	}
 
 }
