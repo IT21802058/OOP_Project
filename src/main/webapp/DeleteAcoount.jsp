@@ -69,7 +69,7 @@
 			<li><a href="DisplayCustomerServlet"> My Profile </a></li>
 		</ul>
 	</header>
-	
+	</div>
 	
 	<br><br><br>
 	
