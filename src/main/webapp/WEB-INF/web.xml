@@ -179,8 +179,6 @@
     <servlet-name>UpdVeiwExistingCusServlet</servlet-name>
     <url-pattern>/UpdVeiwExistingCusServlet</url-pattern>
   </servlet-mapping>
-<<<<<<< Updated upstream
-=======
   <servlet>
     <description></description>
     <display-name>DeleteOrder</display-name>
