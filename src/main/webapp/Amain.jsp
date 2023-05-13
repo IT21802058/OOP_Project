@@ -21,7 +21,8 @@
 		</ul>
 	</header>
 	</div >
-	<table align="center">
+	<h1>Admin DashBoard</h1>
+	<table class="table">
 
 				<tr style="height:500px">
 					<td style="width:350px">

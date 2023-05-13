@@ -78,6 +78,7 @@ header li a:hover{
 	height: 220px;
 	color: black;
 	cursor: pointer;
+	
 }
 	
 
@@ -88,4 +89,12 @@ button{
 	
 button:hover{
 	background-color : #d9b680;
+}
+h1{
+	font-family:verdana;
+	text-align: center;
+}
+.table{
+	margin-left:40%;
+	margin-right:45%;
 }

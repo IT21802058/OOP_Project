@@ -54,7 +54,7 @@
 	    
 	    
 	    <td><a href="DeleteOrderservlet?id=<%=fuel_order.getId()%>">
-	    <input type="button" name="delete" value="Delete"></a>
+	    <input type="button" name="delete" value="Delete" class="Delete"></a>
 	    <!-- <td><button class="delete">Delete</button></td> -->
 	  </tr>
 	  <%} %>
