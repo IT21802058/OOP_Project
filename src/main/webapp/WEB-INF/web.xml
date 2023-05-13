@@ -199,4 +199,44 @@
     <servlet-name>DeleteOrderservlet</servlet-name>
     <url-pattern>/DeleteOrderservlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ipaymentservice</display-name>
+    <servlet-name>ipaymentservice</servlet-name>
+    <servlet-class>com.oop.service.ipaymentservice</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ipaymentservice</servlet-name>
+    <url-pattern>/ipaymentservice</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>paymentservlet</display-name>
+    <servlet-name>paymentservlet</servlet-name>
+    <servlet-class>com.oop.servlet.paymentservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>paymentservlet</servlet-name>
+    <url-pattern>/paymentservlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>updatepaymentservlet</display-name>
+    <servlet-name>updatepaymentservlet</servlet-name>
+    <servlet-class>com.oop.servlet.updatepaymentservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updatepaymentservlet</servlet-name>
+    <url-pattern>/updatepaymentservlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>deletepaymentservlet</display-name>
+    <servlet-name>deletepaymentservlet</servlet-name>
+    <servlet-class>com.oop.servlet.deletepaymentservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deletepaymentservlet</servlet-name>
+    <url-pattern>/deletepaymentservlet</url-pattern>
+  </servlet-mapping>
 </web-app>
