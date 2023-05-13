@@ -1,6 +1,7 @@
 const data = { 
     labels: ['Petrol', 'Octane95 Petrol ', 'Diesel', 'Super Diesel'],
     datasets: [{
+		
 		int:petrol=7500,
 		int:octane95=10000,
 		int:diesel=6000,

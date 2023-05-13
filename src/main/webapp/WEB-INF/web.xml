@@ -199,4 +199,24 @@
     <servlet-name>DeleteOrderservlet</servlet-name>
     <url-pattern>/DeleteOrderservlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewFuelStatusAdmin_servlet</display-name>
+    <servlet-name>ViewFuelStatusAdmin_servlet</servlet-name>
+    <servlet-class>com.oop.servlet.ViewFuelStatusAdmin_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewFuelStatusAdmin_servlet</servlet-name>
+    <url-pattern>/ViewFuelStatusAdmin_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateStorageaddservlet</display-name>
+    <servlet-name>UpdateStorageaddservlet</servlet-name>
+    <servlet-class>com.oop.servlet.UpdateStorageaddservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStorageaddservlet</servlet-name>
+    <url-pattern>/UpdateStorageaddservlet</url-pattern>
+  </servlet-mapping>
 </web-app>

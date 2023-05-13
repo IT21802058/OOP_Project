@@ -8,27 +8,6 @@
 	<meta charset="UTF-8">
 	<title>AdmMain</title>
 	
-	<style>
-		.button1{
-		font-size:15px;
-		width: 220px;
-		height: 220px;
-		color: black;
-		cursor: pointer;
-		}
-		
-		
-		button{
-		background-color:  #fff;
-		border-radius: 15px;
-		}
-		
-		button:hover{
-			background-color : #d9b680;
-			}
-			
-	</style>
-	
 </head>
 
 <body>
@@ -46,14 +25,13 @@
 
 				<tr style="height:500px">
 					<td style="width:350px">
-					<a href="FuelShow.jsp">
+					<a href="ViewFuelStatusAdmin_servlet">
 					<button><div class="button1"><br>
 					<img src="images\FeulStatus.jpeg" height="160px" width="160px"><br/>
 					<p><b>View Fuel Status</b></p>
 					</div></button></a>
 					</td>
 					
-				
-				</table>
+	</table>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/order.css">
     
 	
-    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
 	<meta charset="UTF-8">
   </head>
   <body>
@@ -18,6 +18,7 @@
 			<li><a href="index.jsp"> Home </a></li>
 			<li><a href=""> About </a></li>
 			<li><a href=""> Contact us </a></li>
+			<li><a href="Amain.jsp">Dashboard</a></li>
 		</ul>
 	</header>
 	</div>

@@ -2,6 +2,11 @@
 
 .nav{
 	text-align: center;
+	font-weight:bold;
+}
+ul {
+	color:white;
+	font-weight:bold;
 }
 
 .indexBody{
@@ -38,9 +43,10 @@
 }
 
 header{
-	background-color:#FFF;
+	background-color:white;
 	padding: 15px;
 	box-shadow: 0 0 3px #000;
+	
 }
 
 header li{
@@ -60,8 +66,26 @@ header li a:hover{
 }
 .btnSub{
 	text-decoration:none;
-	color:white;
+	color:green;
 	padding:5px;
 	border-radius:5px;
-	background-color:#c0c0c0;
+	background-color:#00ff00;
+}
+
+.button1{
+	font-size:15px;
+	width: 220px;
+	height: 220px;
+	color: black;
+	cursor: pointer;
+}
+	
+
+button{
+	background-color:  #fff;
+	border-radius: 15px;
+}
+	
+button:hover{
+	background-color : #d9b680;
 }

@@ -15,12 +15,14 @@
 </head>
 <body>
 	<%@ include file = "jsp/header.jsp" %>
+	<jsp:include page="/ShowOrderServlet"></jsp:include>
 	<div class ="nav">
 	<header>
 		<ul>
 			<li><a href="index.jsp"> Home </a></li>
 			<li><a href=""> About </a></li>
 			<li><a href=""> Contact us </a></li>
+			<li><a href="Amain.jsp">Dashboard</a></li>
 		</ul>
 	</header>
 	</div>
@@ -50,15 +52,8 @@
 	    <td><%=fuel_order.getName()%></td>
 	    <td><%=fuel_order.getEmail()%></td>
 	    
-	    <c:url value="deleteOrder.jsp" var="orddelete">
-	    	<c:param name="id" value="${id}"/>
-	    	<c:param name="product" value="${product}"/>
-	    	<c:param name="size" value="${size}"/>
-	    	<c:param name="qty" value="${qty}"/>
-	    	<c:param name="name" value="${name}"/>
-	    	<c:param name="email" value="${email}"/>
-	    </c:url>
-	    <td><a href="${orddelete}">
+	    
+	    <td><a href="DeleteOrderservlet?id=<%=fuel_order.getId()%>">
 	    <input type="button" name="delete" value="Delete"></a>
 	    <!-- <td><button class="delete">Delete</button></td> -->
 	  </tr>
