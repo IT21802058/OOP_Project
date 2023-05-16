@@ -11,7 +11,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.oop.model.Fuel_order;
+import com.oop.model.Service;
 import com.oop.util.DBConnection;
+import com.oop.model.Fuel;
 
 public class addFuelOrderimpl implements ifuelorder{
 	public static final Logger log= Logger.getLogger(ifuelorder.class.getName());
@@ -20,7 +22,7 @@ public class addFuelOrderimpl implements ifuelorder{
 	
 	private static Statement statement;
 	
-	private PreparedStatement preparedStatement;
+	private static PreparedStatement preparedStatement;
 	
 	private static boolean isSuccess;
 	
@@ -148,5 +150,75 @@ public class addFuelOrderimpl implements ifuelorder{
 
 	}
 
-}
+	public static ArrayList<Fuel> getFuelInfo() {
+		java.util.ArrayList<Fuel> arrayList = new ArrayList<Fuel>();
+		
+		try{
+			//Create a database connection
+			connection = DBConnection.getDBConnection();
+			
+			preparedStatement = connection.prepareStatement("select * from fstorage");
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()){
+			Fuel fuel = new Fuel(resultSet.getString(1),resultSet.getInt(2));
+			arrayList.add(fuel);
+			}
+			
+		}	catch (SQLException e) {
+			log.log(Level.SEVERE, e.getMessage());
+			System.out.println(e);
+		} finally {
+			
+			try {
+				if (preparedStatement != null) {
+					preparedStatement.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				log.log(Level.SEVERE, e.getMessage());
+				System.out.println(e);
+			}
+		}
+		
+		return arrayList;
+	}
 
+
+public void addFuel(Fuel fstorage) {
+	try {
+		connection = DBConnection.getDBConnection();
+		
+		preparedStatement =connection.prepareStatement("UPDATE fstorage SET liters = ?  WHERE fType = ?");
+		connection.setAutoCommit(false);
+		
+		preparedStatement.setInt(1,fstorage.getLiter());
+		preparedStatement.setString(2,fstorage.getfType());
+		
+		
+		
+		preparedStatement.execute();
+		connection.commit();
+	}
+	catch(SQLException e) {
+		log.log(Level.SEVERE,e.getMessage());
+		System.out.println(e);
+	}
+	finally {
+		try {
+			if (preparedStatement != null) {
+				preparedStatement.close();
+			}
+			if (connection != null) {
+				connection.close();
+			}
+		} 
+		catch (SQLException e) {
+			log.log(Level.SEVERE, e.getMessage());
+	
+		}
+		
+	}
+}
+}

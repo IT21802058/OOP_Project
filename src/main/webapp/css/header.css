@@ -3,6 +3,7 @@
 .topContainer{
 	position: relative;
 	background-color:#F1F1F1;
+	width:auto;
 }
 .BrandName{
 	position: absolute;
@@ -16,4 +17,34 @@ body{
 	background-image:url("../images/Background.jpg");
 	background-repeat:no-repeat;
 	background-size:cover;
+}
+header{
+	background-color:white;
+	padding: 15px;
+	box-shadow: 0 0 3px #000;
+	
+}
+
+header li{
+	display: inline;
+	padding-left: 45px;
+}
+
+header li a{
+	color: #333;
+	text-decoration: none;
+	padding: 13px;
+}
+
+header li a:hover{
+	background-color: lightblue;
+	border-radius: 30px;
+}
+.nav{
+	text-align: center;
+	font-weight:bold;
+}
+ul {
+	color:white;
+	font-weight:bold;
 }
