@@ -199,4 +199,64 @@
     <servlet-name>DeleteOrderservlet</servlet-name>
     <url-pattern>/DeleteOrderservlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+<<<<<<< HEAD
+    <display-name>ipaymentservice</display-name>
+    <servlet-name>ipaymentservice</servlet-name>
+    <servlet-class>com.oop.service.ipaymentservice</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ipaymentservice</servlet-name>
+    <url-pattern>/ipaymentservice</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>paymentservlet</display-name>
+    <servlet-name>paymentservlet</servlet-name>
+    <servlet-class>com.oop.servlet.paymentservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>paymentservlet</servlet-name>
+    <url-pattern>/paymentservlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>updatepaymentservlet</display-name>
+    <servlet-name>updatepaymentservlet</servlet-name>
+    <servlet-class>com.oop.servlet.updatepaymentservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updatepaymentservlet</servlet-name>
+    <url-pattern>/updatepaymentservlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>deletepaymentservlet</display-name>
+    <servlet-name>deletepaymentservlet</servlet-name>
+    <servlet-class>com.oop.servlet.deletepaymentservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deletepaymentservlet</servlet-name>
+    <url-pattern>/deletepaymentservlet</url-pattern>
+=======
+    <display-name>ViewFuelStatusAdmin_servlet</display-name>
+    <servlet-name>ViewFuelStatusAdmin_servlet</servlet-name>
+    <servlet-class>com.oop.servlet.ViewFuelStatusAdmin_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewFuelStatusAdmin_servlet</servlet-name>
+    <url-pattern>/ViewFuelStatusAdmin_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateStorageaddservlet</display-name>
+    <servlet-name>UpdateStorageaddservlet</servlet-name>
+    <servlet-class>com.oop.servlet.UpdateStorageaddservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStorageaddservlet</servlet-name>
+    <url-pattern>/UpdateStorageaddservlet</url-pattern>
+>>>>>>> 62cf1e7b09c1319a2f5595782d710d5e9a45a056
+  </servlet-mapping>
 </web-app>

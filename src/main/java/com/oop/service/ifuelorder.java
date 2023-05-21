@@ -3,6 +3,7 @@ package com.oop.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.oop.model.Fuel;
 import com.oop.model.Fuel_order;
 
 public interface ifuelorder {
@@ -15,4 +16,6 @@ public interface ifuelorder {
 	public List<Fuel_order> getAllFuelOrders();
 
 	public ArrayList<Fuel_order> getShowOrder();
+	
+	public void addFuel(Fuel fstorage);
 }
